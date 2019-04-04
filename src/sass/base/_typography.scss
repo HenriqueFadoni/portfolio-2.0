@@ -5,7 +5,7 @@
 
         span { color: $color-secondary-dark };
 
-        animation: moveInRight 2s ;
+        animation: moveInRight 1s backwards;
     }
 
     &__medium-blue {
@@ -15,7 +15,6 @@
 
         span { color: $color-secondary-dark };
 
-        animation: moveInUP 2s 1.5s;
-        animation-fill-mode: backwards;
+        animation: moveInUP 1s 1s backwards;
     }
 }

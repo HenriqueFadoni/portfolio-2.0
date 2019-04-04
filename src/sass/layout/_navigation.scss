@@ -1,0 +1,102 @@
+.navigation {
+    &__button {
+        background-color: $color-secondary-dark-2;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 1000;
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+        border: none;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin-top: 1.5rem;
+        position: relative;
+
+        &,
+        &::after,
+        &::before {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-white;
+            display: inline-block;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before {
+            top: -0.8rem;
+        }
+
+        &::after {
+            top: 0.8rem;
+        }
+    }
+
+    &__icon-active {
+        margin-top: 1.5rem;
+        position: relative;
+        background-color: transparent;
+
+        &,
+        &::after,
+        &::before {
+            width: 3rem;
+            height: 2px;
+            display: inline-block;
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            background-color: $color-white;
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient(
+            $color-secondary,
+            $color-secondary-dark
+        );
+        z-index: 1000rem;
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    &__button:hover &__icon::before{
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after{
+        top: 1rem;
+    }
+}

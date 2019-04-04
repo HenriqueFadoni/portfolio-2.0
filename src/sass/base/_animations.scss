@@ -3,23 +3,11 @@
         margin-left: 20rem;
         opacity: 0;
     }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        margin-left: 0;
-    }
 }
 
 @keyframes moveInUP {
     0% {
         margin-top: 20rem;
         opacity: 0;
-    }
-
-    100% {
-        margin-top: 0;
     }
 }
