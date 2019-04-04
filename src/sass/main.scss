@@ -1,10 +1,15 @@
 //Abstracts
 
 @import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/functions';
 
-//Pages
+//Base
 
-@import './pages/introduction';
+@import './base/base';
+@import './base/utilities';
+@import './base/typography';
+@import './base/animations';
 
 //Component
 
@@ -14,8 +19,6 @@
 
 
 
-//Base
+//Pages
 
-@import './base/base';
-@import './base/typography';
-@import './base/animations';
+@import './pages/introduction';
