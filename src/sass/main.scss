@@ -1,24 +1,24 @@
-//Abstracts
+// Abstracts
 
-@import './abstracts/variables';
-@import './abstracts/mixins';
 @import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
 
-//Base
+// Base
 
-@import './base/base';
-@import './base/utilities';
-@import './base/typography';
 @import './base/animations';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
 
-//Component
+// Component
 
 @import './components/bg-video.scss';
 
-//Layout
+// Layout
 
 
 
-//Pages
+// Pages
 
 @import './pages/introduction';
