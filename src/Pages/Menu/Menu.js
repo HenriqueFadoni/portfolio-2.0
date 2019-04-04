@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+import Button from './Button/Button';
+import ModalBackground from './ModalBackground/ModalBackground';
+import Items from './Items/Items';
+
 class Menu extends Component {
     state = {
         show: false
@@ -13,40 +17,20 @@ class Menu extends Component {
         } else {
             newState = true;
         }
-
+        
         this.setState({ show: newState });
     }
 
     render() {
         return (
             <div className="navigation">
+                <Button 
+                    onClickHandler={this.onClickHandler}
+                    show={this.state.show}/>
 
-                <button onClick={this.onClickHandler} className="navigation__button">
-                    <span className={this.state.show ? "navigation__icon-active" : "navigation__icon"}>&nbsp;</span>
-                </button>
+                <ModalBackground show={this.state.show}/>
 
-
-                <div className={this.state.show ? "navigation__background-active" : "navigation__background"}>&nbsp;</div>
-
-                <nav className={this.state.show ? "navigation__nav-active" : "navigation__nav"}>
-                    <ul className="navigation__list">
-                        <li className="navigation__item">
-                            <a href="#" className="navigation__link">HOME</a>
-                        </li>
-                        <li className="navigation__item">
-                            <a href="#" className="navigation__link">DESCRIPTION</a>
-                        </li>
-                        <li className="navigation__item">
-                            <a href="#" className="navigation__link">PORTFOLIO</a>
-                        </li>
-                        <li className="navigation__item">
-                            <a href="#" className="navigation__link">RESUME</a>
-                        </li>
-                        <li className="navigation__item">
-                            <a href="#" className="navigation__link">CONTACTS</a>
-                        </li>
-                    </ul>
-                </nav>
+                <Items show={this.state.show}/>
             </div>
         );
     }
