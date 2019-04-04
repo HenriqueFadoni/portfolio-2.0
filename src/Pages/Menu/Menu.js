@@ -22,7 +22,7 @@ class Menu extends Component {
             <div className="navigation">
 
                 <button onClick={this.onClickHandler} className="navigation__button">
-                    <span className={ this.state.show ? "navigation__icon-active" : "navigation__icon"}>&nbsp;</span>
+                    <span className={this.state.show ? "navigation__icon-active" : "navigation__icon"}>&nbsp;</span>
                 </button>
 
 
