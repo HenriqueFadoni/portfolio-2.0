@@ -26,9 +26,9 @@ class Menu extends Component {
                 </button>
 
 
-                <div className="navigation__background">&nbsp;</div>
+                <div className={this.state.show ? "navigation__background-active" : "navigation__background"}>&nbsp;</div>
 
-                {/* <nav className="navigation__nav">
+                <nav className={this.state.show ? "navigation__nav-active" : "navigation__nav"}>
                     <ul className="navigation__list">
                         <li className="navigation__item">
                             <a href="#" className="navigation__link">HOME</a>
@@ -46,7 +46,7 @@ class Menu extends Component {
                             <a href="#" className="navigation__link">CONTACTS</a>
                         </li>
                     </ul>
-                </nav> */}
+                </nav>
             </div>
         );
     }
