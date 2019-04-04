@@ -1,0 +1,12 @@
+.introduction {
+    width: 100%;
+    height: 100vh;
+    background-image: 
+        linear-gradient(
+            to right,
+            rgba($color-primary-dark, .9),
+            rgba($color-primary, .85)
+        );
+    color: $color-white;
+    z-index: 2;
+}
