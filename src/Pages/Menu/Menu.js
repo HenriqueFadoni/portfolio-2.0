@@ -30,7 +30,9 @@ class Menu extends Component {
 
                 <ModalBackground show={this.state.show}/>
 
-                <Items show={this.state.show}/>
+                <Items 
+                    onClickHandler={this.onClickHandler}
+                    show={this.state.show}/>
             </div>
         );
     }
