@@ -1,22 +1,34 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Items = props => (
     <nav className={props.show ? "navigation__nav-active" : "navigation__nav"}>
         <ul className="navigation__list">
             <li className="navigation__item">
-                <a href="#" className="navigation__link">HOME</a>
+                <NavLink className="navigation__link" to="/">
+                    HOME
+                </NavLink>
             </li>
             <li className="navigation__item">
-                <a href="#" className="navigation__link">DESCRIPTION</a>
+                <NavLink className="navigation__link" to="/description">
+                    DESCRIPTION
+                </NavLink>
             </li>
             <li className="navigation__item">
-                <a href="#" className="navigation__link">PORTFOLIO</a>
+                <NavLink className="navigation__link" to="/portfolio">
+                    PORTFOLIO
+                </NavLink>
             </li>
             <li className="navigation__item">
-                <a href="#" className="navigation__link">RESUME</a>
+            {/* CHANGE IT TO THE GOOGLE URL */}
+                <NavLink className="navigation__link" to="/"> 
+                    RESUME
+                </NavLink>
             </li>
             <li className="navigation__item">
-                <a href="#" className="navigation__link">CONTACTS</a>
+                <NavLink className="navigation__link" to="/contacts">
+                    CONTACTS
+                </NavLink>
             </li>
         </ul>
     </nav>
