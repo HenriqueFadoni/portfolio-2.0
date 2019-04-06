@@ -63,5 +63,23 @@
         grid-template-rows: repeat(3, 15rem);
 
         justify-content: center;
+
+        &-img {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 3;
+            background: orangered;
+        }
+
+        &-text {
+            grid-column: 3 / span 2;
+            grid-row: 1 / 2;
+            background-color: $color-white;
+        }
+
+        &-skills {
+            grid-column: 3 / span 2;
+            grid-row: 2 / span 2;
+            background-color: orange;
+        }
     }
 }
