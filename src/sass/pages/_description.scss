@@ -11,7 +11,7 @@
 
     //GRID-1
     display: grid;
-    grid-template-columns: minmax(min-content, 1fr);
+    grid-template-columns: minmax( 1fr,min-content);
     grid-template-rows: 30rem 50rem;
 
     // CARDS
@@ -19,11 +19,11 @@
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, minmax(min-content, 10rem));
-        grid-column-gap: 5rem;
+        grid-template-columns: repeat(3, minmax(10rem, min-content));
+        grid-column-gap: 3rem;
        
         justify-content: center;
-        margin: 6rem;
+        margin: 5%;
 
         &-1,
         &-2,
@@ -46,7 +46,8 @@
             transition: all .2s;
 
             p {
-                margin: 0 4rem;
+                display: inline;
+                margin: 0 10%;
             }
         }
 
@@ -59,7 +60,7 @@
 
     &__about {
         display: grid;
-        grid-template-columns: repeat(4, minmax(min-content, 25rem));
+        grid-template-columns: repeat(5, minmax(min-content, 20rem));
         grid-template-rows: repeat(3, 15rem);
 
         justify-content: center;
@@ -67,18 +68,28 @@
         &-img {
             grid-column: 1 / span 2;
             grid-row: 1 / span 3;
-            background: orangered;
+
+            img {
+                height: 100%;
+                background: cover;
+                border-radius: .5rem;
+                transform: translateX(.4rem);
+                z-index: -1;
+            }
         }
 
         &-text {
-            grid-column: 3 / span 2;
+            grid-column: 3 / span 3;
             grid-row: 1 / 2;
             background-color: $color-white;
+            z-index: 1;
         }
 
         &-skills {
-            grid-column: 3 / span 2;
+            grid-column: 3 / span 3;
             grid-row: 2 / span 2;
+            z-index: 1;
+
             background-color: orange;
         }
     }

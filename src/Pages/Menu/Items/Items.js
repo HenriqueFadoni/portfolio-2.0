@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Items = props => (
     <nav className={props.show ? "navigation__nav-active" : "navigation__nav"}>
-        <ul className="navigation__list">
+        <ul className={props.show ? "navigation__list-active" : "navigation__list"}>
             <li className="navigation__item">
                 <NavLink
                     onClick={props.onClickHandler}
