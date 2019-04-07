@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Button from './Button/Button';
 import ModalBackground from './ModalBackground/ModalBackground';
@@ -6,6 +7,13 @@ import Items from './Items/Items';
 
 class Menu extends Component {
     state = {
+        links: [
+            { to: "/", title: 'HOME' },
+            { to: "/description", title: 'DESCRIPTION' },
+            { to: "/portfolio", title: 'PORTFOLIO' },
+            { to: "/", title: 'RESUME' },
+            { to: "/contacts", title: 'CONTACTS' }
+        ],
         show: false
     }
 
@@ -22,6 +30,17 @@ class Menu extends Component {
     }
 
     render() {
+        const navLinks = this.state.links.map(link => (
+            <li className="navigation__item">
+                <NavLink
+                    className="navigation__link" 
+                    onClick={this.onClickHandler}
+                    to={link.to}>
+                    {link.title}
+                </NavLink>
+            </li>
+        ));
+
         return (
             <div className="navigation">
                 <Button 
@@ -31,7 +50,7 @@ class Menu extends Component {
                 <ModalBackground show={this.state.show}/>
 
                 <Items 
-                    onClickHandler={this.onClickHandler}
+                    links={navLinks}
                     show={this.state.show}/>
             </div>
         );
