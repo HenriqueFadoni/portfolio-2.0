@@ -39,7 +39,7 @@ const Description = () => (
             <div className="description__about-skills">
                 <h2 className="text__grey text__grey-subtitle margin-bottom-smallest">My Skills</h2>
                 <ul>
-                    <li>JavaScript ES6+</li>
+                    <li>JS ES6+</li>
                     <li>React</li>
                     <li>Redux</li>
                     <li>Jest</li>

@@ -116,10 +116,21 @@
 
             ul {
                 list-style: none;
-                display: flex;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(9rem, min-content));
             };
 
             li {
+                background-color: $color-blue-darkest;
+                color: $color-white;
+                border-radius: 2rem;
+                padding: 1rem;
+                margin: 1rem;
+                transition: all .2s;
+            }
+
+            li:hover {
+                transform: translateY(-.5rem);
             }
         }
     }
