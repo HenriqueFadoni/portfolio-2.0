@@ -1,9 +1,7 @@
 .cards__icon {
-    height: 5.7rem;
-    width: auto;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
     
     fill: $color-blue-darkest;
-
-    align-items: center;
-    justify-items: center;
 }

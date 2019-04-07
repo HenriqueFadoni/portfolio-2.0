@@ -18,3 +18,11 @@
         animation: moveInUP 1s 1s backwards;
     }
 }
+
+.text__grey {
+    font-family: 'Open Sans', sans-serif;
+    color: $color-blue-darkest;
+    font-size: 1.3rem;
+
+    &-subtitle { font-size: 1.5rem };
+}
