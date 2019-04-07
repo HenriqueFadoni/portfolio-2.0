@@ -1,0 +1,47 @@
+.description__cards {
+    &-1,
+    &-2,
+    &-3 {
+        height: 18rem;
+        background-image: linear-gradient(
+            to bottom right, 
+            rgba($color-white, .85), 
+            rgba($color-white, .85)
+        );
+        border-radius: .5rem;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        font-size: 1.4rem;
+        font-family: 'Open Sans', sans-serif;
+        color: $color-blue-darkest;
+        text-align: center;
+
+        box-shadow: $shadow-light;
+        transition: all .2s;
+
+        p { 
+            display: inline;
+            margin: 1rem 3rem;
+        }
+    }
+
+    &-1:hover,
+    &-2:hover,
+    &-3:hover {
+        transform: translateY(-1rem);
+    }
+}
+
+
+.cards__icon {
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    
+    fill: $color-blue-darkest;
+}

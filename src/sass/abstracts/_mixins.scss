@@ -1,0 +1,10 @@
+@mixin bgGradient($color-1, $color-2, $opacity-1, $opacity-2, $url) {
+    height: 100vh;
+    background-image: linear-gradient(
+        to right, 
+        rgba($color-1, $opacity-1), 
+        rgba($color-2, $opacity-2)
+    ),
+    url($url);
+}
+

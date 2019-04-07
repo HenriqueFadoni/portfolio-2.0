@@ -5,7 +5,7 @@ $color-primary-dark: #353a44;
 
 $color-secondary: #61dafb;
 $color-secondary-dark: #54d3f7;
-$color-secondary-dark-2: #4bb8d6;
+$color-secondary-darkest: #4bb8d6;
 
 $color-blue-lightest: #33d3ff;
 $color-blue: #107f9e;
@@ -13,5 +13,16 @@ $color-blue-dark: #16abd4;
 $color-blue-darkest: #1d687c;
 
 $color-black: rgb(0, 0, 0);
-
 $color-white: rgb(255, 255, 255);
+
+// PADDINGS
+
+$padding-medium: 3rem;
+
+// BOX-SHADOW
+
+$shadow-light: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+// BORDER-RADIUS
+
+$border-radius-smallest: .5rem;

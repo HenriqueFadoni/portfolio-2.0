@@ -1,67 +1,35 @@
 .description {
-    height: 100vh;
-    background-image: linear-gradient(
-        to right, 
-        rgba($color-primary, 0.8), 
-        rgba($color-primary-dark, 0.8)
-    ),
-    url('../img/image-2.jpg');
+    @include bgGradient(
+        $color-primary, 
+        $color-primary-dark,
+        .8,
+        .8,
+        '../img/image-2.jpg'
+    );
+
     background-position-x: center;
     background-size: cover;
 
-    //GRID-1
+    //-------------------------------
+    // GERAL GRID
     display: grid;
     grid-template-columns: minmax( 1fr,min-content);
     grid-template-rows: 30rem 50rem;
 
-    // CARDS
-    //GRID-2
+    //-------------------------------
+    // GRID-1, GRID-CARDS
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(3, minmax(min-content, 25rem));
-        grid-column-gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem));
+        grid-gap: 3rem;
        
         justify-content: center;
         margin: 5%;
-
-        &-1,
-        &-2,
-        &-3 {
-            height: 18rem;
-            background-image: linear-gradient(
-                to bottom right, 
-                rgba($color-white, .85), 
-                rgba($color-white, .85)
-            );
-            border-radius: .5rem;
-
-            display: flex;
-            flex-direction: column;
-
-            align-items: center;
-            justify-content: center;
-
-            font-size: 1.4rem;
-            font-family: 'Open Sans', sans-serif;
-            color: $color-blue-darkest;
-            text-align: center;
-
-            box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-            transition: all .2s;
-
-            p { 
-                display: inline;
-                margin: 1rem 3rem;
-            }
-        }
-
-        &-1:hover,
-        &-2:hover,
-        &-3:hover {
-            transform: translateY(-1rem);
-        }
     }
+
+    //-------------------------------
+    // GRID-2, GRID-ABOUT
 
     &__about {
         display: grid;
@@ -71,25 +39,19 @@
         justify-content: center;
 
         &-img,
-        &-skills {
-            box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
-        }
+        &-skills { box-shadow: $shadow-light };
 
         &-img {
             grid-column: 1 / span 2;
             grid-row: 1 / span 3;
 
-            background-image: linear-gradient(
-                to right, 
-                rgba($color-blue-darkest, 0), 
-                rgba($color-blue-darkest, 0)
-            ),
-            url('../img/image-4.jpg');
+            background-image: url('../img/image-4.jpg');
             background-size: cover;
             background-position: center;
             
-            border-top-left-radius: .5rem;
-            border-bottom-left-radius: .5rem;
+            border-top-left-radius: $border-radius-smallest;
+            border-bottom-left-radius: $border-radius-smallest;
+
             overflow: hidden;
         }
 
@@ -97,10 +59,11 @@
             grid-column: 3 / span 3;
             grid-row: 1 / 2;
 
-            padding: 3rem;
+            padding: $padding-medium;
 
-            border-top-right-radius: .5rem;
+            border-top-right-radius: $border-radius-smallest;
             background-color: $color-white;
+
             z-index: 1;
         }
 
@@ -108,11 +71,12 @@
             grid-column: 3 / span 3;
             grid-row: 2 / span 2;
 
-            padding: 3rem;
-            z-index: 1;
-
-            border-bottom-right-radius: .5rem;
+            padding: $padding-medium;
+            
+            border-bottom-right-radius: $border-radius-smallest;
             background-color: $color-white;
+            
+            z-index: 1;
 
             ul {
                 list-style: none;
@@ -129,9 +93,7 @@
                 transition: all .2s;
             }
 
-            li:hover {
-                transform: translateY(-.5rem);
-            }
+            li:hover { transform: translateY(-.5rem) };
         }
     }
 }
