@@ -12,8 +12,9 @@
 
     //-------------------------------
     // GERAL GRID
+    
     display: grid;
-    grid-template-columns: minmax( 1fr,min-content);
+    grid-template-columns: minmax(1fr, min-content);
     grid-template-rows: 30rem 50rem;
 
     //-------------------------------
@@ -41,6 +42,8 @@
         &-img,
         &-skills { box-shadow: $shadow-light };
 
+        // IMAGE
+
         &-img {
             grid-column: 1 / span 2;
             grid-row: 1 / span 3;
@@ -55,6 +58,8 @@
             overflow: hidden;
         }
 
+        // DESCRIPTION ( TEXT )
+
         &-text {
             grid-column: 3 / span 3;
             grid-row: 1 / 2;
@@ -66,6 +71,8 @@
 
             z-index: 1;
         }
+
+        // SKILLS
 
         &-skills {
             grid-column: 3 / span 3;

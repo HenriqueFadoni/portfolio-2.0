@@ -8,7 +8,7 @@
             rgba($color-white, .85), 
             rgba($color-white, .85)
         );
-        border-radius: .5rem;
+        border-radius: $border-radius-smallest;
 
         display: flex;
         flex-direction: column;
@@ -36,7 +36,6 @@
         transform: translateY(-1rem);
     }
 }
-
 
 .cards__icon {
     display: inline-block;
