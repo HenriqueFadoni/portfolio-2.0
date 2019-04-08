@@ -6,12 +6,12 @@ import Social from './Social/Social';
 import Title from './Title/Title';
 
 const Contacts = () => (
-    <div className="contacts__container">
+    <section className="contacts__container">
         <Title />
         <Social />
         <Address />
         <CallToAction />
-    </div>
+    </section>
 );
 
 export default Contacts;
