@@ -33,7 +33,7 @@ class Menu extends Component {
         const navLinks = this.state.links.map(link => {
             if (link.title !== 'RESUME') {
                 return (
-                    <li className="navigation__item">
+                    <li className="navigation__item" key={link.title}>
                         <NavLink
                             className="navigation__link"
                             onClick={this.onClickHandler}
@@ -44,7 +44,7 @@ class Menu extends Component {
                 );
             } else {
                 return (
-                    <li className="navigation__item">
+                    <li className="navigation__item" key={link.title}>
                         <a
                             target="_blank"
                             className="navigation__link"
