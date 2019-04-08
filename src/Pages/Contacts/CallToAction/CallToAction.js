@@ -2,7 +2,7 @@ import React from 'react';
 
 const CallToAction = () => (
     <div className="contacts__cta">
-        <h2>SEND ME AN E-MAIL</h2>
+        <a href="mailto:henriquefadonii@gmail.com">SEND ME AN E-MAIL</a>
     </div>
 );
 

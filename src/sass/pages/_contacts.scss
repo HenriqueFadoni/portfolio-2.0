@@ -3,7 +3,15 @@
         height: 100vh;
         width: 100%;
         position: relative;
-        background-color: $color-primary;
+        @include bgGradient(
+            $color-primary,
+            $color-primary,
+            .95,
+            .95,
+            '../img/image-5.jpg'
+        );
+        background-position: center;
+        background-size: cover;
 
         display: grid;
         grid-template-columns: repeat(2, minmax(min-content, 40rem));
@@ -74,6 +82,9 @@
         align-self: flex-start;
         
         &-subtitle { margin-bottom: .7rem };
+        h3:last-child {
+            margin-bottom: 1rem;
+        }
     }
 
     &__cta,
@@ -85,15 +96,21 @@
         justify-self: center;
         align-self: center;
 
-        font-size: 2rem;
-        color: $color-white;
-        cursor: pointer;
-
         transition: all .2s;
+
+        a {
+            font-size: 3rem;
+            color: $color-white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all .2s;
+        }
     }
 
     &__cta:hover {
-        color: $color-secondary;
         transform: scale(1.1);
+    }
+    &__cta a:hover {
+        color: $color-secondary;
     }
 }
