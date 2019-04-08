@@ -2,35 +2,98 @@
     &__container {
         height: 100vh;
         width: 100%;
-        background-image: linear-gradient(to top, $color-primary, $color-primary-dark);
+        position: relative;
+        background-color: $color-primary;
 
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+        grid-template-columns: repeat(2, minmax(min-content, 40rem));
         grid-template-rows: repeat(auto-fit, minmax(min-content, 20rem));
+        border-top: 5rem solid $color-blue-darkest;
+        border-bottom: 5rem solid $color-blue-darkest;
 
         justify-content: center;
         align-content: center;
     }
 
     &__title {
-        grid-column: 1 / span 2;
+        grid-column: 1 / -1;
         grid-row: 1 / 2;
+        z-index: 2;
 
-        background-color: #fff;
+        justify-self: center;
+        align-self: center;
+
+        font-size: 3rem;
+        color: $color-white;
+        border-bottom: 1px solid $color-white;
+
+        span {
+            color: $color-secondary;
+        }
     }
 
     &__social {
-        background-color: orange;
+        margin: 3rem;
+
+        ul {
+            display: flex;
+            flex-flow: column;
+            list-style: none;
+            font-size: 1.6rem;
+
+            a,
+            a:visited { 
+                color: $color-white;
+                text-decoration: none;
+                transition: color .2s;
+            }
+
+            li { 
+                display: inline;
+                padding: 1rem;
+                transition: all .2s;
+            }
+
+            li:hover,
+            a:hover { 
+                color: $color-secondary;
+                transform: translateX(1rem);
+            }
+        }
     }
 
     &__address {
-        background-color: green;
+        margin: 3rem;
+        font-size: 1.2rem;
+        color: $color-blue;
+        background-color: $color-white;
+        padding: 1rem;
+        box-shadow: $shadow-light;
+
+        justify-self: center;
+        align-self: flex-start;
+        
+        &-subtitle { margin-bottom: .7rem };
     }
 
-    &__cta {
-        grid-column: 1 / span 2;
+    &__cta,
+    &__cta:visited {
+        grid-column: 1 / -1;
         grid-row: 3 / 4;
+        z-index: 2;
 
-        background-color: orangered;
+        justify-self: center;
+        align-self: center;
+
+        font-size: 2rem;
+        color: $color-white;
+        cursor: pointer;
+
+        transition: all .2s;
+    }
+
+    &__cta:hover {
+        color: $color-secondary;
+        transform: scale(1.1);
     }
 }

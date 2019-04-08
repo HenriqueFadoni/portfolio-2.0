@@ -2,7 +2,7 @@ import React from 'react';
 
 const Title = () => (
     <div className="contacts__title">
-        <h1>CONTACT ME</h1>
+        <h1>CONTACT <span>ME</span></h1>
     </div>
 );
 

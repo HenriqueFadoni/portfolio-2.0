@@ -3,11 +3,21 @@ import React from 'react';
 const Social = () => (
     <div className="contacts__social">
         <ul>
-            <li>Angel List</li>
-            <li>GitHub</li>
-            <li>LinkEdin</li>
-            <li>StackOverFlow</li>
-            <li>UpWork</li>
+            <li>
+                <a href="">Angel List</a>
+            </li>
+            <li>
+                <a href="">GitHub</a>
+            </li>
+            <li>
+                <a href="">LinkEdin</a>
+            </li>
+            <li>
+                <a href="">StackOverFlow</a>
+            </li>
+            <li>
+                <a href="">UpWork</a>
+            </li>
         </ul>
     </div>
 );
