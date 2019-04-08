@@ -30,6 +30,10 @@
         }
     }
 
+    &-1 { animation: moveInLeftNoBouncing .5s backwards};
+    &-2 { animation: moveInLeftNoBouncing .5s .2s backwards};
+    &-3 { animation: moveInLeftNoBouncing .5s .5s backwards};
+
     &-1:hover,
     &-2:hover,
     &-3:hover {

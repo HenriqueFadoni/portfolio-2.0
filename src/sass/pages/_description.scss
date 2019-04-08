@@ -39,6 +39,8 @@
 
         justify-content: center;
 
+        animation: moveInUp2 .5s .5s backwards;
+
         &-img,
         &-skills { box-shadow: $shadow-light };
 
