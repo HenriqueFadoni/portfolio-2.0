@@ -5,9 +5,39 @@
     }
 }
 
+@keyframes moveInLeft {
+    0% {
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(1rem);
+        opacity: 1;
+    }
+}
+
+@keyframes moveInUp2 {
+    0% {
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+}
+
 @keyframes moveInUP {
     0% {
         margin-top: 20rem;
         opacity: 0;
     }
+}
+
+@keyframes moveInDown {
+    0% {
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+}
+
+
+@keyframes appear {
+    0% { opacity: 0 };
 }

@@ -34,6 +34,7 @@
         font-size: 3rem;
         color: $color-white;
         border-bottom: 1px solid $color-white;
+        animation: moveInDown .5s backwards;
 
         span {
             color: $color-secondary;
@@ -48,6 +49,7 @@
             flex-flow: column;
             list-style: none;
             font-size: 1.6rem;
+            animation: moveInLeft .8s .5s backwards ease-out;
 
             a,
             a:visited { 
@@ -77,9 +79,11 @@
         background-color: $color-white;
         padding: 1rem;
         box-shadow: $shadow-light;
+        animation: appear .5s .7s backwards;
 
         justify-self: center;
         align-self: flex-start;
+
         
         &-subtitle { margin-bottom: .7rem };
         h3:last-child {
@@ -97,6 +101,7 @@
         align-self: center;
 
         transition: all .2s;
+        animation: moveInUp2 .5s .8s backwards;
 
         a {
             font-size: 3rem;
