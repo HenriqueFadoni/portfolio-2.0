@@ -11,7 +11,7 @@ class Menu extends Component {
             { to: "/", title: 'HOME' },
             { to: "/description", title: 'DESCRIPTION' },
             { to: "/portfolio", title: 'PORTFOLIO' },
-            { to: "/", title: 'RESUME' },
+            { to: "https://drive.google.com/file/d/1QDj5qjCMVyWiGUe63Jp9K4I6lXv4A97j/view?usp=sharing", title: 'RESUME' },
             { to: "/contacts", title: 'CONTACTS' }
         ],
         show: false
@@ -25,33 +25,49 @@ class Menu extends Component {
         } else {
             newState = true;
         }
-        
+
         this.setState({ show: newState });
     }
 
     render() {
-        const navLinks = this.state.links.map(link => (
-            <li className="navigation__item">
-                <NavLink
-                    className="navigation__link" 
-                    onClick={this.onClickHandler}
-                    to={link.to}>
-                    {link.title}
-                </NavLink>
-            </li>
-        ));
+        const navLinks = this.state.links.map(link => {
+            if (link.title !== 'RESUME') {
+                return (
+                    <li className="navigation__item">
+                        <NavLink
+                            className="navigation__link"
+                            onClick={this.onClickHandler}
+                            to={link.to}>
+                            {link.title}
+                        </NavLink>
+                    </li>
+                );
+            } else {
+                return (
+                    <li className="navigation__item">
+                        <a
+                            target="_blank"
+                            className="navigation__link"
+                            href={link.to}
+                            rel="noopener noreferrer">
+                            {link.title}
+                        </a>
+                    </li>
+                );
+            }
+        });
 
         return (
             <div className="navigation">
-                <Button 
+                <Button
                     onClickHandler={this.onClickHandler}
-                    show={this.state.show}/>
+                    show={this.state.show} />
 
-                <ModalBackground show={this.state.show}/>
+                <ModalBackground show={this.state.show} />
 
-                <Items 
+                <Items
                     links={navLinks}
-                    show={this.state.show}/>
+                    show={this.state.show} />
             </div>
         );
     }
