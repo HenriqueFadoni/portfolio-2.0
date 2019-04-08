@@ -1,7 +1,7 @@
 import React from 'react';
 
 const CallToAction = () => (
-    <div className="contacts_cta">
+    <div className="contacts__cta">
         <h2>SEND ME AN E-MAIL</h2>
     </div>
 );

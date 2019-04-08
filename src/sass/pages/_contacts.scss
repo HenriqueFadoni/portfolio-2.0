@@ -1,0 +1,36 @@
+.contacts {
+    &__container {
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(to top, $color-primary, $color-primary-dark);
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+        grid-template-rows: repeat(auto-fit, minmax(min-content, 20rem));
+
+        justify-content: center;
+        align-content: center;
+    }
+
+    &__title {
+        grid-column: 1 / span 2;
+        grid-row: 1 / 2;
+
+        background-color: #fff;
+    }
+
+    &__social {
+        background-color: orange;
+    }
+
+    &__address {
+        background-color: green;
+    }
+
+    &__cta {
+        grid-column: 1 / span 2;
+        grid-row: 3 / 4;
+
+        background-color: orangered;
+    }
+}
