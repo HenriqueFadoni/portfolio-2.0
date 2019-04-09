@@ -1,0 +1,35 @@
+.portfolio {
+    &__container {
+        height: 100vh;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 20vh 80vh;
+    }
+
+    &__list-container {
+        height: 100%;
+        width: 100%;
+        padding: 3rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem));
+        grid-template-rows: repeat(auto-fit, minmax(min-content, 40rem));
+        grid-gap: 2rem;
+
+        justify-content: center;
+    }
+
+    &__item {
+        height: 100%;
+        width: 100%;
+
+        border-radius: .5rem;
+        background-image: linear-gradient(
+            to bottom right, 
+            #2998ff, 
+            #5643fa
+        );
+    }
+}

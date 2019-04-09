@@ -5,7 +5,7 @@ import Introduction from './Pages/Introduction/Introduction';
 import Description from './Pages/Description/Description';
 import Contacts from './Pages/Contacts/Contacts';
 import Menu from './Pages/Menu/Menu';
-import Portfolio from './Pages/Portifolio/Portifolio';
+import Portfolio from './Pages/Portifolio/Portfolio';
 
 class App extends Component {
   render() {
