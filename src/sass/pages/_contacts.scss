@@ -16,8 +16,7 @@
         display: grid;
         grid-template-columns: repeat(2, minmax(min-content, 40rem));
         grid-template-rows: repeat(auto-fit, minmax(min-content, 20rem));
-        border-top: 5rem solid $color-blue-darkest;
-        border-bottom: 5rem solid $color-blue-darkest;
+        grid-gap: 4rem;
 
         justify-content: center;
         align-content: center;
@@ -31,7 +30,7 @@
         justify-self: center;
         align-self: center;
 
-        font-size: 3rem;
+        font-size: 6rem;
         color: $color-white;
         border-bottom: 1px solid $color-white;
         animation: moveInDown .5s backwards;
@@ -73,17 +72,15 @@
     }
 
     &__address {
-        margin: 3rem;
+        margin: 2rem;
         font-size: 1.2rem;
-        color: $color-blue;
-        background-color: $color-white;
+        color: $color-white;
         padding: 1rem;
-        box-shadow: $shadow-light;
         animation: appear .5s .7s backwards;
 
         justify-self: center;
         align-self: flex-start;
-
+        border: 1px solid $color-white;
         
         &-subtitle { margin-bottom: .7rem };
         h3:last-child {
@@ -99,6 +96,8 @@
 
         justify-self: center;
         align-self: center;
+        background-color: #1f212780;
+        padding: 1rem;
 
         transition: all .2s;
         animation: moveInUp2 .5s .8s backwards;
