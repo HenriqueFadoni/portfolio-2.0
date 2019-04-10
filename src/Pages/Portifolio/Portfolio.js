@@ -13,7 +13,7 @@ class Portifolio extends Component {
                 title: "My Chat Example", 
                 skills: "React/Redux", 
                 github: "https://github.com/HenriqueFadoni/my-chat-example", 
-                website: "" },
+                website: null },
             { 
                 title: "Nexter", 
                 skills: "HTML/CSS + SASS", 
@@ -24,7 +24,7 @@ class Portifolio extends Component {
                 title: "Portfolio", 
                 skills: "React + SASS", 
                 github: "https://github.com/HenriqueFadoni/portfolio", 
-                website: "" 
+                website: "https://henriquefadoni.github.io/portfolio/" 
             },
             { 
                 title: "The Burger Builder", 
@@ -42,7 +42,7 @@ class Portifolio extends Component {
                 title: "Forkify Website", 
                 skills: "HTML5/CSS + SASS", 
                 github: "https://github.com/HenriqueFadoni/Forkify-Website", 
-                website: "" 
+                website: null 
             }
         ]
     }
@@ -60,13 +60,17 @@ class Portifolio extends Component {
                         rel="noopener noreferrer">
                         GitHub
                     </a>
-                    <a
-                        className="portfolio__website"
-                        target="_blank"
-                        href={project.website}
-                        rel="noopener noreferrer">
-                        Website
-                    </a>
+                    {
+                        project.website ? 
+                        <a
+                            className="portfolio__website"
+                            target="_blank"
+                            href={project.website}
+                            rel="noopener noreferrer">
+                            Website
+                        </a> 
+                        : null
+                    }
                 </div>
             );
         });

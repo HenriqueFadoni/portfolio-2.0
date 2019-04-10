@@ -43,7 +43,7 @@
 
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, minmax(min-content, 8rem));
+        grid-template-rows: repeat(4, minmax(min-content, 10rem));
         
         text-align: center;
 
@@ -58,6 +58,7 @@
         transition: all .2s;
 
         &-title {
+            text-align: center;
             display: inline-block;
             font-size: 2rem;
             color: $color-white;
@@ -80,7 +81,9 @@
     }
 
     &__github,
-    &__website {
+    &__website,
+    &__github:visited,
+    &__website:visited {
         align-self: center;
 
         font-family: 'Open Sans', sans-serif;
@@ -91,7 +94,13 @@
         color: $color-white;
         box-shadow: $shadow-light;
         background-color: $color-secondary-darkest;
+        transition: all .2s;
+
+        &:hover { background-color: $color-blue-dark };
     }
+
+    &__github:active,
+    &__website:active { transform: scale(.95) };
 
     &__github { margin: 3rem 3rem 1rem 3rem };
 
