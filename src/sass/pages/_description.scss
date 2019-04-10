@@ -41,6 +41,10 @@
 
         animation: moveInUp2 .5s .5s backwards;
 
+        @include respond(tab-land) {
+            margin: 0 5rem;
+        }
+
         &-img,
         &-skills { box-shadow: $shadow-light };
 
@@ -58,6 +62,10 @@
             border-bottom-left-radius: $border-radius-smallest;
 
             overflow: hidden;
+
+            @include respond(tab-land) {
+                background-position-x: .3rem;
+            }
         }
 
         // DESCRIPTION ( TEXT )
