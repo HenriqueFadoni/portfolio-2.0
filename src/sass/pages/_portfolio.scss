@@ -6,6 +6,8 @@
         display: grid;
         grid-template-columns: 100vw;
         grid-template-rows: 20vh auto;
+
+        background-image: linear-gradient(to right bottom, rgb(58, 54, 75), rgb(43, 38, 68));
     }
 
     &-title {
@@ -16,7 +18,7 @@
             font-size: 6rem;
             font-family: 'Open Sans', sans-serif;
             font-weight: 200;
-            color: #5643fa;
+            color: $color-white;
         }
     }
 
@@ -73,6 +75,7 @@
 
         &:hover {
             transform: scale(1.2);
+            z-index: 2;
         }
     }
 
