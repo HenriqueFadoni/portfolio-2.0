@@ -5,6 +5,13 @@
     }
 }
 
+@keyframes moveInRight2 {
+    0% {
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+}
+
 @keyframes moveInLeft {
     0% {
         transform: translateX(-10rem);
