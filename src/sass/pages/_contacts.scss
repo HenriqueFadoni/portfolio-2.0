@@ -80,6 +80,11 @@
             a:hover { 
                 color: $color-blue;
                 transform: translateX(1rem);
+                
+                @include respond(tab-land) {
+                    color: $color-blue-darkest;
+                    transform: translateX(0);
+                }
             }
         }
     }
@@ -87,14 +92,10 @@
     &__address {
         @include allSpaceBgWhite;
 
-
         font-size: 1.2rem;
         color: $color-blue-darkest;
         padding: 4rem;
         animation: moveInRight2 .5s .7s backwards;
-
-        justify-self: center;
-        align-self: flex-start;
         
         &-subtitle { margin-bottom: .7rem };
         h3:last-child {
@@ -135,5 +136,10 @@
     &__cta a:hover {
         font-size: 3.2rem;
         color: $color-blue;
+
+        @include respond(tab-land) {
+            font-size: 3rem;
+            color: $color-blue-darkest;
+        }
     }
 }

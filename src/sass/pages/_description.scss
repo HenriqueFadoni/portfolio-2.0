@@ -17,6 +17,12 @@
     grid-template-columns: minmax(1fr, min-content);
     grid-template-rows: 30rem 50rem;
 
+    @include respond(tab-port) {
+        height: 100vh;
+        background-position: center;
+        grid-template-rows: auto;
+        padding-bottom: 5rem;
+    }
     //-------------------------------
     // GRID-1, GRID-CARDS
 
@@ -27,6 +33,11 @@
        
         justify-content: center;
         margin: 5%;
+
+        @include respond(tab-port) {
+            margin: 10% 10% 4% 10%;
+            grid-template-columns: repeat(auto-fit, minmax(min-content, 15rem));
+        }
     }
 
     //-------------------------------
@@ -110,7 +121,12 @@
                 transition: all .2s;
             }
 
-            li:hover { transform: translateY(-.5rem) };
+            li:hover { 
+                transform: translateY(-.5rem);
+                @include respond(tab-land) {
+                    transform: translateY(0);
+                }
+            }
         }
     }
 }

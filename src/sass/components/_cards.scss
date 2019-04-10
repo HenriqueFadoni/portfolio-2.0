@@ -28,6 +28,11 @@
             display: inline;
             margin: 1rem 3rem;
         }
+
+        @include respond(tab-port) {
+            font-size: 1.2rem;
+            p { margin: 1rem 1rem };
+        }
     }
 
     &-1 { animation: moveInLeftNoBouncing .5s backwards};
@@ -38,6 +43,8 @@
     &-2:hover,
     &-3:hover {
         transform: translateY(-1rem);
+
+        @include respond(tab-land) { transform: translateY(0) };
     }
 }
 

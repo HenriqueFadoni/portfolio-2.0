@@ -16,6 +16,10 @@ html {
     @include respond(tab-land) {
         font-size: 56.25%; // 1rem = 9px
     }
+
+    @include respond(tab-land) {
+        font-size: 50%; // 1rem = 8px
+    }
 }
 
 body {

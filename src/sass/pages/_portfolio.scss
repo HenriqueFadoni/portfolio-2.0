@@ -81,6 +81,11 @@
         &:hover {
             transform: scale(1.2);
             z-index: 2;
+
+            @include respond(tab-land) {
+                transform: scale(1);
+                z-index: 1;
+            }
         }
     }
 
@@ -100,15 +105,30 @@
         background-color: $color-secondary-darkest;
         transition: all .2s;
 
-        &:hover { background-color: $color-blue-dark };
+        &:hover { 
+            background-color: $color-blue-dark;
+            @include respond(tab-land) {
+                background-color: $color-secondary-darkest;
+            }
+        }
     }
 
     &__github:active,
-    &__website:active { transform: scale(.95) };
+    &__website:active { 
+        transform: scale(.95);
+        @include respond(tab-land) {
+            transform: scale(1);
+        }
+    }
 
     &__github { margin: 3rem 3rem 1rem 3rem };
 
     &__website { margin: 1rem 3rem 3rem 3rem };
 
-    &__list-container:hover &__item:not(:hover) { transform: scale(0.95) };
+    &__list-container:hover &__item:not(:hover) {
+        transform: scale(0.95);
+        @include respond(tab-land) {
+            transform: scale(1);
+        }
+    }
 }
