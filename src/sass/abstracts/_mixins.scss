@@ -8,3 +8,13 @@
     url($url);
 }
 
+@mixin allSpaceBgWhite {
+    width: 100%;
+    height: 100%;
+    background-color: $color-white;
+}
+
+@mixin secondaryFont {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+}

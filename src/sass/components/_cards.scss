@@ -17,7 +17,7 @@
         justify-content: center;
 
         font-size: 1.4rem;
-        font-family: 'Open Sans', sans-serif;
+        @include secondaryFont;
         color: $color-blue-darkest;
         text-align: center;
 

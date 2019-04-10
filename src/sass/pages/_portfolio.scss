@@ -7,7 +7,11 @@
         grid-template-columns: 100vw;
         grid-template-rows: 20vh auto;
 
-        background-image: linear-gradient(to right bottom, rgb(58, 54, 75), rgb(43, 38, 68));
+        background-image: linear-gradient(
+            to right bottom, 
+            $color-grey-light, 
+            $color-grey-dark
+        );
     }
 
     &-title {
@@ -16,8 +20,7 @@
 
         h1 {
             font-size: 6rem;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 200;
+            @include secondaryFont;
             color: $color-white;
         }
     }
@@ -25,16 +28,16 @@
     &__list-container {
         height: 100%;
         width: 100%;
-        padding: 3rem;
-
+        
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem));
         grid-template-rows: repeat(auto-fit, minmax(min-content, 40rem));
         grid-gap: 2rem;
-
-        transition: all .2s;
-
+        
         justify-content: center;
+        
+        padding: $padding-medium;
+        transition: all .2s;
     }
 
     &__item {
@@ -51,15 +54,15 @@
         border-radius: .5rem;
         background-image: linear-gradient(
             to bottom right, 
-            #2998ff, 
-            #5643fa
+            $color-marine-blue-light, 
+            $color-marine-blue-dark
         );
 
         transition: all .2s;
 
         &-title {
-            text-align: center;
             display: inline-block;
+            text-align: center;
             font-size: 2rem;
             color: $color-white;
             margin: 5rem 0;
@@ -67,10 +70,11 @@
 
         &-skills {
             align-self: center;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 200;
+
+            @include secondaryFont;
             font-size: 1.4rem;
             color: $color-white;
+
             margin: 0 3rem;
         }
 
@@ -86,12 +90,12 @@
     &__website:visited {
         align-self: center;
 
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 200;
+        @include secondaryFont;
         font-size: 1.4rem;
         text-decoration: none;
-        padding: 1rem;
         color: $color-white;
+
+        padding: 1rem;
         box-shadow: $shadow-light;
         background-color: $color-secondary-darkest;
         transition: all .2s;
@@ -106,7 +110,5 @@
 
     &__website { margin: 1rem 3rem 3rem 3rem };
 
-    &__list-container:hover &__item:not(:hover) {
-        transform: scale(0.95);
-    }
+    &__list-container:hover &__item:not(:hover) { transform: scale(0.95) };
 }
