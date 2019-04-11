@@ -4,12 +4,12 @@ import './sass/main.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 const app = (
-    <BrowserRouter>
+    <HashRouter>
         <App />
-    </BrowserRouter>
+    </HashRouter>
 );
 
 ReactDOM.render(app, document.getElementById('root'));
