@@ -17,8 +17,12 @@ html {
         font-size: 56.25%; // 1rem = 9px
     }
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         font-size: 50%; // 1rem = 8px
+    }
+
+    @include respond(phone) {
+        font-size: 43.8%; // 1rem = 7px
     }
 }
 
