@@ -4,24 +4,24 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/Love-Coding.5683999a.mp4"
   },
   {
-    "revision": "40f4a0be798aa5309d57",
-    "url": "/portfolio/static/css/main.64c6d347.chunk.css"
+    "revision": "59e9d54602b21fcba82f",
+    "url": "/portfolio/static/css/main.aea36492.chunk.css"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "5c6abb7d3aac5ad4dfba",
-    "url": "/portfolio/static/js/2.5f2b56d8.chunk.js"
+    "revision": "1b8b9099a8f3e3cedd0f",
+    "url": "/portfolio/static/js/2.f99a305e.chunk.js"
   },
   {
     "revision": "d27829f0eed8801a9e28a6b33a7a4f96",
     "url": "/portfolio/static/media/symbol-defs.d27829f0.svg"
   },
   {
-    "revision": "40f4a0be798aa5309d57",
-    "url": "/portfolio/static/js/main.189ae9ca.chunk.js"
+    "revision": "59e9d54602b21fcba82f",
+    "url": "/portfolio/static/js/main.272d34d2.chunk.js"
   },
   {
     "revision": "2574f75ca44b0010e0c701b0656e7dca",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/image-5.04006883.jpg"
   },
   {
-    "revision": "440ad9d021908b6d1b73846b3ef558bd",
+    "revision": "767e8f8f4db20f6851535e1de9a65bf3",
     "url": "/portfolio/index.html"
   }
 ];
